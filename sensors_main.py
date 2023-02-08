@@ -15,7 +15,8 @@ def main():
         for row in sensor_data:
             print (row)
             print('test3')
-            print("test5")
+            print("test6")
+            
     else:
         print("Error: Incorrect command line arguments.")
 
