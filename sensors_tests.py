@@ -21,7 +21,17 @@ class TestSensors(unittest.TestCase):
     # incorrect. To be implemented.
 
     # Placeholder for the test case test_check_limits3. To be designed
-    # and implemented. 
+    # and implemented.
+
+    def test_parse_limits1(self):
+        result = sensors_main.parse_limits()
+        self.assertLogs(result)
+    
+    def test_read_sensors1(self):
+        result = sensors_main.read_sensors()
+        self.assertLogs(result)
+    
+
 
 if __name__ == '__main__':
     unittest.main()
