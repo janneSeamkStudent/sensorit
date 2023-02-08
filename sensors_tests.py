@@ -36,7 +36,7 @@ class TestSensors(unittest.TestCase):
         tsekkaa onko resultin ekan indeksin alaindeksi = 21.2
         '''
         result = sensors_main.read_sensors()
-        self.assertEqual(result[0][0], 21.2)
+        self.assertEqual(result[0][1], 21.2)
     
 
 
