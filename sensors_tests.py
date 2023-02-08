@@ -24,12 +24,19 @@ class TestSensors(unittest.TestCase):
     # and implemented.
 
     def test_parse_limits1(self):
+        '''
+        tsekkaa onko resultin tyyppi 'lista'
+        '''
         result = sensors_main.parse_limits()
-        self.assertLogs(result)
+        result = type(result)
+        self.assertIs(result, list)
     
     def test_read_sensors1(self):
+        '''
+        tsekkaa onko resultin ekan indeksin alaindeksi = 21.2
+        '''
         result = sensors_main.read_sensors()
-        self.assertLogs(result)
+        self.assertEqual(result[0][0], 21.2)
     
 
 
